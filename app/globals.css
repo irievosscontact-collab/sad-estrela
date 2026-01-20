@@ -1,0 +1,53 @@
+:root {
+  --bg: #0b0b12;
+  --bg-soft: #12121c;
+  --pink: #ff8ad4;
+  --pink-soft: #ffb7e3;
+  --text: #f5f5fa;
+  --text-muted: #b8b8d1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background: radial-gradient(circle at top, #1a1024 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.glow {
+  text-shadow: 0 0 12px rgba(255, 138, 212, 0.6);
+}
+
+.card {
+  background: var(--bg-soft);
+  border: 1px solid rgba(255, 138, 212, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
